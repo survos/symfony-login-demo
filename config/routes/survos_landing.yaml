@@ -1,0 +1,4 @@
+survos_landing_bundle:
+    resource: '@SurvosLandingBundle/Controller/LandingController.php'
+    prefix: /
+    type: annotation
