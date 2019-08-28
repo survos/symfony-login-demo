@@ -12,6 +12,33 @@ security:
         main:
             anonymous: true
             provider: msgphp_user
+            user_checker: App\Security\UserChecker
+            form_login:
+                login_path: login
+                check_path: login
+                default_target_path: home
+                username_parameter: email
+                password_parameter: password
+                remember_me: true
+            remember_me:
+                secret: '%kernel.secret%'
+                remember_me_parameter: remember_me
+            logout:
+                path: logout
+            switch_user:
+                role: ROLE_ADMIN
+            oauth:
+                login_path: /login
+                failure_path: /login
+                resource_owners:
+                    google: /oauth/login-check/google
+                    facebook: /oauth/login-check/facebook
+                oauth_user_provider:
+                    service: App\Security\OauthUserProvider
+            guard:
+                authenticators:
+                    - App\Security\OneTimeLoginAuthenticator
+                    -
 
             # activate different ways to authenticate
 
@@ -19,15 +46,6 @@ security:
             # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
 
             # https://symfony.com/doc/current/security/form_login_setup.html
-            form_login:
-                login_path: /login
-                check_path: /login
-                default_target_path: /profile
-                username_parameter: email
-                password_parameter: password
-
-            logout:
-                path: logout
 
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used

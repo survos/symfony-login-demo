@@ -136,6 +136,23 @@
     "msgphp/domain": {
         "version": "v0.13.0"
     },
+    "msgphp/eav": {
+        "version": "0.14-dev"
+    },
+    "msgphp/eav-bundle": {
+        "version": "0.10",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "0.10",
+            "ref": "9b2774120df769609554a5883df6c3a2224a9761"
+        },
+        "files": [
+            "config/packages/msgphp_eav.php",
+            "src/Entity/Attribute.php",
+            "src/Entity/AttributeValue.php"
+        ]
+    },
     "msgphp/user": {
         "version": "v0.13.0"
     },
@@ -151,6 +168,9 @@
             "config/packages/msgphp_user.php",
             "src/Entity/User.php"
         ]
+    },
+    "msgphp/user-eav": {
+        "version": "0.14-dev"
     },
     "nikic/php-parser": {
         "version": "v4.2.2"

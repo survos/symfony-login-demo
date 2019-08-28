@@ -18,6 +18,7 @@ Simple Symfony app that demonstrate login/logout with email or social media
     bin/console doctrine:schema:update --force
     bin/console survos:setup --no-interaction
     
+## Add HWI/OAutho
 
     # Load from master to get http-plug 2
     composer config minimum-stability dev
