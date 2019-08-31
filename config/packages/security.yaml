@@ -38,7 +38,6 @@ security:
             guard:
                 authenticators:
                     - App\Security\OneTimeLoginAuthenticator
-                    -
 
             # activate different ways to authenticate
 

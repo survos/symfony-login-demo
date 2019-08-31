@@ -45,7 +45,9 @@ Alas, those services don't exist.  You can copy them from msgphp/symfony-demo-ap
 ```bash
 mkdir src/Security
 wget https://raw.githubusercontent.com/msgphp/symfony-demo-app/master/src/Security/OauthUserProvider.php -O src/Security/OauthUserProvider.php 
+wget https://raw.githubusercontent.com/msgphp/symfony-demo-app/master/src/Security/UserChecker.php -O src/Security/UserChecker.php 
 wget https://raw.githubusercontent.com/msgphp/symfony-demo-app/master/src/Security/OneTimeLoginAuthenticator.php -O src/Security/OneTimeLoginAuthenticator.php 
+wget https://raw.githubusercontent.com/msgphp/symfony-demo-app/master/src/Entity/UserAttributeValue.php  -O src/Entity/UserAttributeValue.php
 
 ```
 
