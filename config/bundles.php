@@ -17,8 +17,9 @@ return [
     Symfony\WebpackEncoreBundle\WebpackEncoreBundle::class => ['all' => true],
     Knp\Bundle\MenuBundle\KnpMenuBundle::class => ['all' => true],
     Survos\LandingBundle\SurvosLandingBundle::class => ['all' => true],
-    MsgPhp\UserBundle\MsgPhpUserBundle::class => ['all' => true],
     HWI\Bundle\OAuthBundle\HWIOAuthBundle::class => ['all' => true],
     Http\HttplugBundle\HttplugBundle::class => ['all' => true],
     MsgPhp\EavBundle\MsgPhpEavBundle::class => ['all' => true],
+    MsgPhp\UserBundle\MsgPhpUserBundle::class => ['all' => true],
+
 ];

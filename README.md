@@ -1,5 +1,15 @@
 # symfony-login-demo
+
 Simple Symfony app that demonstrate login/logout with email or social media 
+
+## Quick Install
+
+```bash
+git clone git@github.com:survos/symfony-login-demo.git && cd symfony-login-demo && composer install
+```
+
+## Rebuild the App
+
 
     symfony new --full my-app && cd my-app
     
@@ -47,6 +57,7 @@ mkdir src/Security
 wget https://raw.githubusercontent.com/msgphp/symfony-demo-app/master/src/Security/OauthUserProvider.php -O src/Security/OauthUserProvider.php 
 wget https://raw.githubusercontent.com/msgphp/symfony-demo-app/master/src/Security/UserChecker.php -O src/Security/UserChecker.php 
 wget https://raw.githubusercontent.com/msgphp/symfony-demo-app/master/src/Security/OneTimeLoginAuthenticator.php -O src/Security/OneTimeLoginAuthenticator.php 
+wget https://raw.githubusercontent.com/msgphp/symfony-demo-app/master/src/Security/RoleProvider.php -O src/Security/RoleProvider.php 
 wget https://raw.githubusercontent.com/msgphp/symfony-demo-app/master/src/Entity/UserAttributeValue.php  -O src/Entity/UserAttributeValue.php
 
 ```
