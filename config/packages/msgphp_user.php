@@ -32,4 +32,14 @@ return static function (ContainerConfigurator $container): void {
             RoleProvider::class,
         ],
     ]);
+
+    $container->services()
+        ->defaults()
+        ->private()
+        ->autoconfigure()
+        ->autowire()
+        ->set(App\Console\ClassContextElementFactory::class)
+        ->alias(MsgPhp\Domain\Infrastructure\Console\Context\ClassContextElementFactory::class, App\Console\ClassContextElementFactory::class)
+    ;
+
 };

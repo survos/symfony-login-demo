@@ -1,0 +1,42 @@
+easy_admin:
+    site_name: 'Login Demo <i>Analysis</i>'
+    user:
+        name_property_path: originUsername
+    design:
+        form_theme:
+        - horizontal
+
+        assets:
+            css:
+            - 'build/css/app.css'
+            - '//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css'
+            js:
+            - 'https://unpkg.com/snarkdown@1.2.2/dist/snarkdown.umd.js'
+            - '//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js'
+            - 'js/news.js'
+        #              - 'build/js/app.js'
+        menu:
+        - entity: User
+          icon: email
+        - entity: Role
+        - entity: uav
+    show:
+        max_results: 20
+    list:
+        actions: ['edit', 'search', 'show', '-delete']
+    entities:
+#        # List the entity class name you want to manage
+        Role:
+            class: App\Entity\Role
+        uav:
+            class: App\Entity\UserAttributeValue
+        User:
+            class: App\Entity\User
+            list:
+                fields:
+                    - email
+                    - emails
+                    - id
+                    - roles
+                    - createdAt
+                    - attributeValues   

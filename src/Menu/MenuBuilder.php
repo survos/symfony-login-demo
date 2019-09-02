@@ -12,13 +12,13 @@ class MenuBuilder extends LandingMenuBuilder
         $menu = $this->factory->createItem('root');
 $menu->setChildrenAttribute('class', 'nav navbar-nav mr-auto');
 
-$menu->addChild('survos_landing', ['route' => 'survos_landing'])
-->setAttribute('icon', 'fas fa-home');
+$menu->addChild('survos_landing', ['route' => 'survos_landing'])->setAttribute('icon', 'fas fa-home');
 
 $menu->addChild('survos_landing_credits', ['route' => 'survos_landing_credits'])
 ->setAttribute('icon', 'fas fa-trophy');
 
-// $menu->addChild('admin', ['route' => 'easyadmin']);
+$menu->addChild('admin', ['route' => 'easyadmin'])
+        ->setAttribute('icon', 'fas fa-wrench');
 
 // ... add more children
 

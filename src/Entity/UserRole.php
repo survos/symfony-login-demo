@@ -17,4 +17,8 @@ use MsgPhp\User\UserRole as BaseUserRole;
  */
 class UserRole extends BaseUserRole
 {
+    public function __toString()
+    {
+        return $this->getRole()->getName();
+    }
 }

@@ -52,4 +52,9 @@ class User extends BaseUser implements DomainEventHandler
     {
         return $this->id;
     }
+
+    public function getEmail()
+    {
+        return $this->credential->getUsername();
+    }
 }
